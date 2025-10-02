@@ -1,0 +1,252 @@
+*{
+    background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+.banner {
+    position: absolute;
+    width: 1486px;
+    min-height: 360px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: url("images/gtech_logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 0;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    top: 28px;
+    min-height: 495px;
+    background: transparent;
+}
+
+.intro h1 {
+    position: absolute;
+    top: 305px;
+    left: 442px;
+    text-shadow: 4px 4px 8px #000000;
+    background: transparent;
+    font-size: 2.5em;
+    font-size: 50px;
+}
+
+.intro p {
+    position: absolute;
+    top: 399px;
+    left: 305px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px #000000;
+    background: transparent;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+/* Nav-bar styling */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #203a43;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+
+.nav-bar li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    border-radius: 4px;
+}
+
+li a:hover {
+    background-color: #ffffff;
+    color: #2c5364;
+}
+
+div.card{
+    position: absolute;
+    width: 350px;
+    top: 120px;
+    left: 608px;
+    background: transparent;
+    text-align: center;
+}
+
+.card img{
+    border-radius:46%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Card effect for content section */
+.content {
+    position: relative;
+    max-width: 700px;
+    margin: 40px auto;
+    color: #2c5364;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+    padding: 32px 40px;
+    text-align: left;
+}
+
+.content p {
+    text-align: left;
+    margin-bottom: 18px;
+    color: #fbfbfb;
+    font-size: 1.08em;
+    line-height: 1.7;
+    background: transparent;
+}
+
+.content h1 {
+    font-style: oblique;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background: transparent;
+}
+
+.content h2 {
+    font-style: normal;
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: transparent;
+}
+
+.project-grid {
+    width: 1280px;
+    position: relative;
+    margin: 40px auto;
+    border-radius: 16px;
+    color: #2c5364;
+    box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+    padding: 22px 30px;
+}
+
+.project-card1 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,255,255,0.1);
+  gap: 15px; /* spacing between image and text */
+}
+
+.project-card1 img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.project-card1 h3,
+.project-card1 p,
+.project-card1 a {
+  color: #ffffff;
+}
+
+.project-card1 a {
+  color: #39FF14;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.project-card1 .text-content {
+  text-align: right;
+  flex: 1;
+}
+
+.project-card2 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,255,255,0.1);
+  gap: 15px;
+}
+
+.project-card2 img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.project-card2 h3,
+.project-card2 p,
+.project-card2 a {
+  color: #ffffff;
+}
+
+.project-card2 a {
+  color: #39FF14;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.project-card2 .text-content {
+  flex: 1;
+}
+
+.project-card3 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,255,255,0.1);
+  gap: 15px;
+}
+
+.project-card3 img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.project-card3 h3,
+.project-card3 p,
+.project-card3 a {
+  color: #ffffff;
+}
+
+.project-card3 a {
+  color: #39FF14;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.project-card3 .text-content {
+  text-align: right;
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
