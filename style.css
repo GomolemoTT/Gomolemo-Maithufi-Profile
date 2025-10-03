@@ -9,7 +9,8 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: 1486px;
-  min-height: 360px;
+  min-height: 36vh;
+  max-height: 360px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-image: url("images/gtech_logo.png");
     background-repeat: no-repeat;
@@ -21,7 +22,6 @@
 .intro {
     position: relative;
     width: 100%;
-    top: 28px;
   min-height: 495px;
     background: transparent;
 }
@@ -309,6 +309,16 @@ img {
   .intro h1 { font-size: 1.2rem; }
   .intro p { font-size: 0.9rem; }
   .project-grid { padding: 12px; }
+}
+
+/* Medium screens: tablets / narrow laptops */
+@media (max-width: 1200px) and (min-width: 901px) {
+  .banner { min-height: 30vh; }
+
+  /* Slightly reduce absolute offsets so content doesn't overflow on narrower large screens */
+  .intro h1 { left: 40%; top: 32%; }
+  .intro p { left: 30%; top: 40%; }
+  div.card { top: 100px; }
 }
 
 .project-card3 h3,
