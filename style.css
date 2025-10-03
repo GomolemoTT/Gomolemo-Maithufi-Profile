@@ -26,7 +26,7 @@
 .intro h1 {
     position: absolute;
     top: 305px;
-    left: 442px;
+    left: 389px;
     text-shadow: 4px 4px 8px #000000;
     background: transparent;
     font-size: 2.5em;
@@ -36,7 +36,7 @@
 .intro p {
     position: absolute;
     top: 399px;
-    left: 305px;
+    left: 262px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 4px #000000;
     background: transparent;
@@ -87,8 +87,8 @@ li a:hover {
 div.card{
     position: absolute;
     width: 350px;
-    top: 120px;
-    left: 608px;
+    top: 95px;
+    left: 670px;
     background: transparent;
     text-align: center;
 }
