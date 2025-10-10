@@ -74,3 +74,37 @@ body{
 	text-align: center;
 	font-size: 17px;
 }
+
+/*Main Content Section*/
+.page-content {
+	background-color: rgba(150, 150, 150, 0.1);
+	border-radius: 12px;
+}
+
+.page-content h1 {
+	text-align: center;
+	text-shadow: 2px 2px 4px black;
+	font-size: 42px;
+}
+
+.content-about {
+	position: relative;
+	width: 98%;
+	text-align: right;
+	font-size: 20px;
+	text-shadow: 2px 2px 4px black;
+	margin: 12px;
+}
+
+.content-talents {
+	position: relative;
+	width: 83%;
+	margin-left: 120px;
+	font-size: 20px;
+	text-shadow: 2px 2px 4px black;
+	text-align: justify;
+}
+
+.content-talents h2 {
+	text-align: center;
+}
