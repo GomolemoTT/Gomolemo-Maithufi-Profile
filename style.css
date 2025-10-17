@@ -1,110 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body{
-  background-color: #2c2c2c;
-  color: whitesmoke;
-  background-image: url("images/buried.png");
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-/*main body layout*/
-.body-layout {
-	display: flex;
+    background-image: url("images/buried.png");
+    background-color: rgb(240, 228, 228);
 }
 
-.main {
-	width: 86%;
+.header {
+    position: relative;
+    background-color: rgb(6, 61, 89);
 }
 
+/*header Image Section*/
+.header img{
+    margin-left: 20px;
+}
+
+/*Nav Bar Section*/
 .nav-bar {
-	width: 14%;
-	background-image: linear-gradient(to bottom,rgba(254,254,254,0.5), rgba(246, 246,246,0.1),rgba(246,246,246,0), rgba(246,246,246,0));
+    width: 95%;
+    margin-left: 37px;
+    min-height: 42px;
+    background-color: rgb(14, 106, 152);
+    box-shadow: 0.7px 0.7px 0.7px rgb(52, 52, 52);
 }
 
-/*Navigation Bar*/
 .nav-bar ul {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-bar li{
-	margin: none;
+.nav-bar li {
+    list-style: none;
 }
 
-.nav-bar a{
-	display: block;
-	text-decoration: none;
-	padding: 8px;
-	color: black;
+.nav-bar a {
+    display: block;
+    padding: 12px;
+    margin: 10px;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .nav-bar a:hover {
-	background-color: silver;
+    background-color: rgb(8, 134, 162);
 }
 
 /*Banner Section*/
 .banner {
-	position: absolute;
-	width: 83%;
-	background-color: rgba(150,150,150, 0.4);
-	z-index: -1;
-	min-height: 420px;
-	box-shadow: 1px 1px 2px 2px black;
-	border-radius: 18px;
-	padding: 2px;
-	margin-left: 20px;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(5, 94, 139);
+    min-height: 180px;
+    z-index: -1;
+}
+
+/*Main Section*/
+.main {
+    width: 92%;
+    border-radius: 12px;
+    padding: 15px;
+    margin-left: 57px;
+    text-align: center;
 }
 
 /*Intro Section*/
 .intro {
-	padding: 6px;
-	min-height: 424px;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+    width: 100%;
+    min-height: 320px;
+    background-image: url("images/brushed-alum.png");
+    background-color: rgba(46, 46, 46, 0.5);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 1px 1px black;
 }
 
-.intro-image {
-	clip-path: circle(78%);
-	box-shadow: 2px 3px 2px 1px black;
+.intro-image img {
+    clip-path: circle(45%);
 }
 
 .intro-message {
-	text-shadow: 2px 2px 4px black;
-	text-align: center;
-	font-size: 17px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.72);
 }
 
 /*Main Content Section*/
 .page-content {
-	background-color: rgba(150, 150, 150, 0.1);
-	border-radius: 12px;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 1px 1px black;
 }
 
 .page-content h1 {
-	text-align: center;
-	text-shadow: 2px 2px 4px black;
-	font-size: 42px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px black;
+}
+
+.main-contents {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    gap: 15px;
 }
 
 .content-about {
-	position: relative;
-	width: 98%;
-	text-align: right;
-	font-size: 20px;
-	text-shadow: 2px 2px 4px black;
-	margin: 12px;
+    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(52, 52, 52);
+    border-radius: 12px;
+    margin: 8px;
+}
+
+.content-about h2 {
+    text-align: left;
+    margin: 5px;
+}
+
+.content-about p {
+    text-align: justify;
+    margin: 5px;
 }
 
 .content-talents {
-	position: relative;
-	width: 83%;
-	margin-left: 120px;
-	font-size: 20px;
-	text-shadow: 2px 2px 4px black;
-	text-align: justify;
+    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(52, 52, 52);
+    border-radius: 12px;
+    margin: 8px
 }
 
 .content-talents h2 {
-	text-align: center;
+    text-align: left;
+    margin: 5px;
+}
+
+.content-talents p {
+    text-align: justify;
+    margin: 5px;
+}
+
+/*Portfolio Main content*/
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(52, 52, 52);
+    border-radius: 12px;
+}
+
+.project-card1 {
+    display: flex;
+    margin: 8px;
+    text-align: right;
+    justify-content: center;
+    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(36, 36, 36);
+    padding: 5px;
+    border-radius: 9px;
+    gap: 14px;
+}
+
+.project-card2 {
+    display: flex;
+    margin: 8px;
+    text-align: left;
+    justify-content: center;
+    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(36, 36, 36);
+    padding: 5px;
+    border-radius: 9px;
+    gap: 14px;
+}
+
+.project-card3 {
+    display: flex;
+    margin: 8px;
+    text-align: right;
+    justify-content: center;
+    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(36, 36, 36);
+    padding: 5px;
+    border-radius: 9px;
+    gap: 14px;
+}
+
+/*Footer Section*/
+.footer {
+    background-color: rgb(6, 61, 89);
+    text-align: center;
 }
