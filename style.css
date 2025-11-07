@@ -10,13 +10,24 @@ body{
 }
 
 .header {
+    display: flex;
     position: relative;
     background-color: rgb(6, 61, 89);
 }
 
 /*header Image Section*/
-.header img{
+.header #logo {
     margin-left: 20px;
+}
+
+.search {
+    margin-left: 570px;
+    margin-top: 26px;
+}
+
+.header #cart {
+    margin-left: 535px;
+    margin-top: 26px;
 }
 
 /*Nav Bar Section*/
@@ -62,7 +73,8 @@ body{
 /*Main Section*/
 .main {
     width: 92%;
-    border-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     padding: 15px;
     margin-left: 57px;
     text-align: center;
@@ -85,6 +97,30 @@ body{
 
 .intro-message {
     text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.72);
+}
+
+.intro-service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    background-image: url("images/brushed-alum.png");
+    background-color: rgba(46, 46, 46, 0.5);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 1px 1px black;
+}
+
+.intro-portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    background-image: url("images/brushed-alum.png");
+    background-color: rgba(46, 46, 46, 0.5);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 1px 1px black;
 }
 
 /*Main Content Section*/
@@ -145,8 +181,9 @@ body{
     flex-direction: column;
     gap: 12px;
     background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(52, 52, 52);
-    border-radius: 12px;
+    box-shadow: 1px 1px black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .project-card1 {
@@ -186,4 +223,27 @@ body{
 .footer {
     background-color: rgb(6, 61, 89);
     text-align: center;
+}
+
+/*Computer Softwareup page content styling*/
+.pcsoftware-content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(52, 52, 52);
+    border-radius: 12px;
+}
+
+.pcsoftwareup {
+    display: flex;
+    margin: 8px;
+    padding: 5px;
+    gap: 11px;
+    border-radius: 9px;
+    justify-content: center;
+    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(36, 36, 36);
+}
+
+.software-update {
+    text-align: left;
 }
