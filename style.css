@@ -21,12 +21,12 @@ body{
 }
 
 .search {
-    margin-left: 570px;
+    margin-left: clamp(1rem, 35.6vw, 39rem);
     margin-top: 26px;
 }
 
 .header #cart {
-    margin-left: 535px;
+    margin-left: clamp(1rem, 34vw, 33.4375rem);
     margin-top: 26px;
 }
 
