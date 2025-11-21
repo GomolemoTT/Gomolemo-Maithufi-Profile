@@ -6,7 +6,7 @@
 
 body{
     background-image: url("images/buried.png");
-    background-color: rgb(240, 228, 228);
+    background-color: rgba(3, 66, 240, 0.212);
 }
 
 .header {
@@ -33,6 +33,7 @@ body{
 
 /*Nav Bar Section*/
 .nav-bar {
+    position: relative;
     width: 95%;
     margin-left: 37px;
     min-height: 42px;
@@ -74,6 +75,7 @@ body{
 /*Main Section*/
 .main {
     width: 92%;
+    position: relative;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     padding: 15px;
@@ -156,6 +158,8 @@ body{
 
 /*Main Content Section*/
 .page-content {
+    position: relative;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.486);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -169,20 +173,72 @@ body{
 
 .main-contents {
     display: flex;
+    position: relative;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.6);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    gap: 15px;
+    gap: 70px;
+}
+
+.details {
+    display: flex;
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    align-content: center;
+    border-radius: 8px;
+    gap: 16px;
+}
+
+.Details_Me {
+    width: 70%;
+    position: relative;
+    text-align: right;
+    margin-left: 1px;
+}
+
+.Detail_Pic {
+    width: 30%;
+    min-height: 210px;
+    border-radius: 9px;
+    background-image: url(images/office1.jpg);
+    animation-name: myJourny;
+    animation-duration: 10s;
+}
+
+@keyframes myJourny {
+    0% {background-image: url(images/office2.jpg);}
+    50% {background-image: url(images/office3.jpg);}
+    100% {background-image: url(images/office4.jpg);}
+}
+
+.content-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.content-title-about {
+    width: 70%;
+    position: relative;
+    min-height: 190px;
+    align-content: center;
+    margin-left: 363px;
+    color: rgb(13, 228, 174);
+    border-radius: 9px;
+    background-image: url(images/office2.jpg);
 }
 
 .content-about {
-    box-shadow: 0.7px 0.7px 0.7px 0.7px rgb(52, 52, 52);
-    border-radius: 12px;
     margin: 8px;
 }
 
 .content-about h2 {
+    width: 20%;
     text-align: left;
+    font-size: 70px;
+    background-color: rgba(156, 93, 216, 0.45);
     margin: 5px;
 }
 
