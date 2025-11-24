@@ -22,7 +22,7 @@ body{
 }
 
 .search {
-    margin-left: clamp(1rem, 1.6vw, 39rem);
+    margin-left: clamp(1rem, 1.6vw, 1.5rem);
     margin-top: 26px;
 }
 
