@@ -35,8 +35,8 @@ body{
 .nav-bar {
     position: relative;
     width: 95%;
-    margin-left: 37px;
-    min-height: 42px;
+    margin-left: clamp(1rem, 25vw, 2.1rem);
+    min-height: 3.1rem;
     background-color: rgb(14, 106, 152);
     box-shadow: 0.7px 0.7px 0.7px rgb(52, 52, 52);
 }
