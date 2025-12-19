@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Phone Troubleshooting Page</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+		<script src="purchasing_order.js"></script>
     </head>
     <body>
         <div class = "header">
@@ -12,30 +13,85 @@
 				<input type="text" name="q" placeholder="Search here" aria-label="Search">
 				<button type="submit">Search</button>
 			</form>
-			<a id="items-incart" href="#"><img id="cart" src="images/shopping-cart.jpg" width="44" height="30"></a>
+			<img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart" onclick="openCart()">
 		</div>
 		<div class = "banner"></div>
 		<div class="nav-bar">
 			<ul>
-				<li><a href="index.html">About</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
                 <li><a href="services.html">Services</a></li>
 			</ul>
 		</div>
 		<div class = "main">
-			<div class="intro">
-				<div class = "intro-image">
-					<img src="images/myP_Pic.jpg" width="170" height="210">
-				</div>
-				<div class = "intro-message">
-					<h1>Gomolemo Thapelo Titus Maithufi</h1>
-					<p>Coding enthusiast and front-end developer with a passion for creating user-friendly and accessible web experiences.</p>
-				</div>
+			<div class="intro-portfolio">
+				<h1>Phone sofrware plans</h1>
 			</div>
 			<div class="page-content">
-				<h1>Profile Summary</h1>
+                <div class="phonesoftware-content">
+					<div class="phonesoftware">
+						<img src="images/phoneUnlock.jpg" alt="softwareup_pic" width="254" height="202" >
+						<div class="pc-work">
+							<h2>Unlocking of phone locked by pin</h2>
+							<p>We are humans and forgetting is normal expecially if you going to pass on that phone to another reletive. If you forgot the password we got you.</p>
+							<h4>R230</h4>
+							<div>
+								<button onclick="addToCart('phoneUnlock',230)">Add</button>
+							</div>
+						</div>
+					</div>
+					<div class="phonesoftware">
+						<img src="images/software_installation-pic.jpg" alt="softwareup_pic" width="254" height="202" >
+						<div class="pc-work">
+							<h2>Software Technical problem fix</h2>
+							<p>Like all things that live on this planet you phone is going to need some maintanence expecially if it's aging. Come through to get the help you need at that time.</p>
+							<h4>R200</h4>
+							<div>
+								<button onclick="addToCart('softwareTechProblem',210)">Add</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cartModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeCart()">&times;</span>
+				<h2>Service(s) Selected</h2>
+				<ul id="cart-items"></ul>
+				<p><b>Total:</b> R<span id="cart-total">0</span></p><button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
+			</div>
+		</div>
+		<div id="purchaseModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closePurchase()">&times;</span>
+				<div class="purchase-q">
+					<p>Do you have a loyal customer account</p>
+					<br>
+					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes     </label><input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
+				</div>
 				<br>
-                
+				<div id="loyalCustReg" class="loyalCustReg">
+					<form id="CustReg" class="CustReg">
+						<label for="fName">First Name(s):</label>
+						<br>
+						<input type="text" id="fName" title="Enter valid ID Name" placeholder="Type your name" name="fName">
+						<br><br>
+						<label for="lName">Last Name:</label>
+						<br>
+						<input type="text" id="lName" title="Please Enter last Name that's on ID" placeholder="Type your Last Name" name="lName">
+						<br><br>
+						<label for="dOB">Birthday:</label>
+						<br>
+						<input type="date" id="dOB" name="birthday">
+						<br><br>
+						<label for="contactNo">Phone No.:</label>
+						<br>
+						<input type="tel" maxlength="10"  id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10 digit number">
+						<br><br>
+						<input type="submit" value="Submit" onclick="saveFormData()">
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="footer">

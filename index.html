@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile-Home</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+		<script src="purchasing_order.js"></script>
     </head>
     <body>
         <div class = "header">
@@ -13,7 +14,7 @@
 				<input type="text" name="q" placeholder="Search here" aria-label="Search">
 				<button type="submit">Search</button>
 			</form>
-			<a id="items-incart" href="#" title="View shopping cart"><img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart icon"></a>
+			<img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart" onclick="openCart()">
 		</div>
 		<div class = "banner"></div>
 		<div class="nav-bar">
@@ -42,7 +43,7 @@
 						<div class = "Details_Me">
 							<h2>My Journey</h2>
 							<div class="line_Details"></div>
-							<p>My Journey in IT overall started when i was young around 15yrs old, but at that time i was not fully invested in it and didn't consider it a proper career for me to take. It was years later when i finally realized what capabilities i possess and i would give a great debt to my Mother as she spoted the talent for tech in me at a young age. I did enroll for a <b>Civil Engineering</b> in 2019 but i had to learn the hard way that buliding was not my fortee. Then in 2020 I got a contract for working as a Junior IT Technicin and there did i realize my true passion, the work I was doing over there was to configure smart watchs and roll them out. After working there I just told myself that i would no longer</p>
+							<p>My interest in IT began when I was about 15 years old. At the time, I didn’t see it as a career path, but my mother recognized my talent early on and encouraged me to pursue it. In 2019, I enrolled in Civil Engineering, but soon realized that building was not my forte. The turning point came in 2020 when I worked as a Junior IT Technician. My role involved configuring and rolling out smartwatches, and it was there that I discovered my true passion for technology. From that moment, I committed fully to building a career in IT.</p>
 						</div>
 						<div class="Detail_Pic">
 						</div>
@@ -52,7 +53,7 @@
 							<div class="content-title-about">
 								<h2><strong>About Myself</strong></h2>
 							</div>
-							<p><i>As a front-end developer, I specialize in writing clean, responsive, and standards-based code to craft accessible web interfaces. I’m focused on empowering contact through clarity and seamless interaction across all devices.</i></p>
+							<p><i>As a front‑end developer, I specialize in writing clean, responsive, and standards‑based code to craft accessible web interfaces. My focus is on clarity, seamless interaction, and empowering communication across all devices.</i></p>
 						</div>
 						<div class = " content-talents">
 							<h2>Hobbies & Talents</h2>
@@ -63,6 +64,46 @@
 					</div>
 				</div>
 
+			</div>
+		</div>
+		<div id="cartModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeCart()">&times;</span>
+				<h2>Service(s) Selected</h2>
+				<ul id="cart-items"></ul>
+				<p><b>Total:</b> R<span id="cart-total">0</span></p><button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
+			</div>
+		</div>
+		<div id="purchaseModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closePurchase()">&times;</span>
+				<div class="purchase-q">
+					<p>Do you have a loyal customer account</p>
+					<br>
+					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes     </label><input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
+				</div>
+				<br>
+				<div id="loyalCustReg" class="loyalCustReg">
+					<form id="CustReg" class="CustReg">
+						<label for="fName">First Name(s):</label>
+						<br>
+						<input type="text" id="fName" title="Enter valid ID Name" placeholder="Type your name" name="fName">
+						<br><br>
+						<label for="lName">Last Name:</label>
+						<br>
+						<input type="text" id="lName" title="Please Enter last Name that's on ID" placeholder="Type your Last Name" name="lName">
+						<br><br>
+						<label for="dOB">Birthday:</label>
+						<br>
+						<input type="date" id="dOB" name="birthday">
+						<br><br>
+						<label for="contactNo">Phone No.:</label>
+						<br>
+						<input type="tel" maxlength="10"  id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10 digit number">
+						<br><br>
+						<input type="submit" value="Submit" onclick="saveFormData()">
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="footer">

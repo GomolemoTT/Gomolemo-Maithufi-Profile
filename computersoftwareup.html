@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Computer Troubleshooting Page</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+		<script src="purchasing_order.js"></script>
     </head>
     <body>
 		<div class = "header">
@@ -13,7 +14,7 @@
 				<input type="text" name="q" placeholder="Search here" aria-label="Search">
 				<button type="submit">Search</button>
 			</form>
-			<a id="items-incart" href="#"><img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart"></a>
+			<img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart" onclick="openCart()">
 		</div>
 		<div class = "banner"></div>
 		<div class="nav-bar">
@@ -25,23 +26,72 @@
 		</div>
 		<div class = "main">
 			<div class="intro-portfolio">
-				<h1>Portfolio Summary</h1>
+				<h1>Computer Software Plans</h1>
 			</div>
 			<div class="page-content">
-				<h1>Computer Software Plans</h1>
-				<br>
 				<div class="pcsoftware-content">
 					<div class="pcsoftwareup">
 						<img src="images/upgrade-of-software.jpg" alt="softwareup_pic" width="254" height="202" >
-						<div class="software-update">
+						<div class="pc-work">
 							<h2>Software Update</h2>
 							<p>We offer affordable prices to keep your PC updated click add to get your PC updated</p>
 							<h4>R190</h4>
 							<div>
-								<button id="Software_update">Add</button>
+								<button onclick="addToCart('software-update',190)">Add</button>
 							</div>
 						</div>
 					</div>
+					<div class="pcsoftwareup">
+						<img src="images/software_installation-pic.jpg" alt="softwareup_pic" width="254" height="202" >
+						<div class="pc-work">
+							<h2>Software Installation</h2>
+							<p>Smoth and relaible installations </p>
+							<h4>R200</h4>
+							<div>
+								<button onclick="addToCart('software-installation',200)">Add</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cartModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeCart()">&times;</span>
+				<h2>Service(s) Selected</h2>
+				<ul id="cart-items"></ul>
+				<p><b>Total:</b> R<span id="cart-total">0</span></p><button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
+			</div>
+		</div>
+		<div id="purchaseModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closePurchase()">&times;</span>
+				<div class="purchase-q">
+					<p>Do you have a loyal customer account</p>
+					<br>
+					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes     </label><input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
+				</div>
+				<br>
+				<div id="loyalCustReg" class="loyalCustReg">
+					<form id="CustReg" class="CustReg">
+						<label for="fName">First Name(s):</label>
+						<br>
+						<input type="text" id="fName" title="Enter valid ID Name" placeholder="Type your name" name="fName">
+						<br><br>
+						<label for="lName">Last Name:</label>
+						<br>
+						<input type="text" id="lName" title="Please Enter last Name that's on ID" placeholder="Type your Last Name" name="lName">
+						<br><br>
+						<label for="dOB">Birthday:</label>
+						<br>
+						<input type="date" id="dOB" name="birthday">
+						<br><br>
+						<label for="contactNo">Phone No.:</label>
+						<br>
+						<input type="tel" maxlength="10"  id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10 digit number">
+						<br><br>
+						<input type="submit" value="Submit" onclick="saveFormData()">
+					</form>
 				</div>
 			</div>
 		</div>
