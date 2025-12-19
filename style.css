@@ -27,7 +27,7 @@ body{
 }
 
 .header #cart {
-    margin-left: clamp(1rem, 80vw, 51rem);
+    margin-left: clamp(1rem, 80vw, 59.2rem);
     margin-top: 26px;
     cursor: pointer;
 }
