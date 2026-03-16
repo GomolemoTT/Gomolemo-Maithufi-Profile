@@ -18,7 +18,7 @@ body{
 
 /*header Image Section*/
 .header #logo {
-    margin-left: clamp(1rem, 2vw, 1.2rem); /*<= Adapt this insterd of px cause of dynmicness*/
+    margin-left: clamp(0.1rem, 2vw, 1.2rem); /*<= Adapt this insterd of px cause of dynmicness*/
 }
 
 .search {
@@ -27,7 +27,8 @@ body{
 }
 
 .header #cart {
-    margin-left: clamp(1rem, 80vw, 59.2rem);
+    position: absolute;
+    margin-left: 91%;
     margin-top: 26px;
     cursor: pointer;
 }
@@ -36,7 +37,7 @@ body{
 .nav-bar {
     position: relative;
     width: 95%;
-    margin-left: clamp(1rem, 25vw, 2.1rem);
+    margin-left: 2%;
     min-height: 3.1rem;
     background-color: rgba(124, 124, 124, 0.629);
     box-shadow: 0.7px 0.7px 0.7px rgb(52, 52, 52);
@@ -80,7 +81,7 @@ body{
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     padding: 15px;
-    margin-left: 57px;
+    margin-left: 3.5%;
     text-align: center;
 }
 
@@ -227,7 +228,7 @@ body{
     position: relative;
     min-height: 190px;
     align-content: center;
-    margin-left: 363px;
+    margin-left: 30%;
     color: rgb(13, 228, 174);
     border-radius: 9px;
     background-image: url(images/office2.jpg);
