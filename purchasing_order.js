@@ -8,10 +8,12 @@ function addToCart(product,price){//adds items when clicked
     cart.push({product, price});
     total += price;
     displayCart();
+    showCartFeedback(product);
 }
 
 function displayCart(){//displays items in the cart box
     const cartList = document.getElementById("cart-items");
+    const cartCount = document.getElementById("cart-count");
     cartList.innerHTML = "";
     cart.forEach((item, index) =>{
         cartList.innerHTML += `
@@ -20,9 +22,27 @@ function displayCart(){//displays items in the cart box
         </li>`;
     });
     document.getElementById("cart-total").textContent = total;
+    cartCount.textContent = cart.length;
+    cartCount.setAttribute("aria-label", `${cart.length} ${cart.length === 1 ? "item" : "items"} in cart`);
+}
+
+function showCartFeedback(product) {
+    const feedback = document.getElementById("cart-feedback");
+    const itemCount = cart.length;
+    feedback.textContent = `${product} added. ${itemCount} ${itemCount === 1 ? "item" : "items"} in your cart.`;
+    feedback.classList.add("is-visible");
+
+    window.clearTimeout(showCartFeedback.timeoutId);
+    showCartFeedback.timeoutId = window.setTimeout(() => {
+        feedback.classList.remove("is-visible");
+    }, 3500);
 }
 
 function removeFromCart(index){//removes an item from the cart box
+    if (!cart[index]) {
+        return;
+    }
+
     total -= cart[index].price;
     cart.splice(index, 1);
     displayCart();

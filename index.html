@@ -19,7 +19,11 @@
 					<button type="submit">Search</button>
 				</form>
 				<div class="header-actions">
-					<img id="cart" src="images/shopping-cart.jpg" alt="Shopping cart" onclick="openCart()">
+					<button class="cart-button" type="button" aria-label="Open shopping cart" onclick="openCart()">
+						<img id="cart" src="images/shopping-cart.jpg" alt="">
+						<span id="cart-count" class="cart-count" aria-label="0 items in cart">0</span>
+					</button>
+					<span id="cart-feedback" class="cart-feedback" role="status" aria-live="polite"></span>
 				</div>
 			</div>
 		</header>
@@ -116,6 +120,11 @@
 
 		<footer class="footer">
 			<p>© GTECH. All Rights Reserved.</p>
+			<div class="contact-details">
+				<a href="tel:+27684352360">Call: 068 435 2360</a>
+				<a href="mailto:maithufigomolemo7@gmail.com">Email: maithufigomolemo7@gmail.com</a>
+				<a href="https://wa.me/27684352360" target="_blank" rel="noopener noreferrer">WhatsApp: 068 435 2360</a>
+			</div>
 			<div class="socials">
 				<a href="https://www.facebook.com/gomolemo.titus.3">Facebook</a>
 				<a href="#">LinkedIn</a>

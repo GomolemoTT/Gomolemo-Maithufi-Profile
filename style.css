@@ -132,6 +132,22 @@ input {
     display: flex;
     align-items: center;
     gap: 18px;
+    position: relative;
+}
+
+.cart-button {
+    position: relative;
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.cart-button:focus-visible {
+    outline: 3px solid #5eead4;
+    outline-offset: 3px;
 }
 
 #cart {
@@ -142,6 +158,47 @@ input {
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.08);
     cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    display: grid;
+    place-items: center;
+    min-width: 21px;
+    height: 21px;
+    padding: 0 5px;
+    border: 2px solid #0f172a;
+    border-radius: 999px;
+    background: #14b8a6;
+    color: #0f172a;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.cart-feedback {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    z-index: 20;
+    width: max-content;
+    max-width: min(320px, calc(100vw - 32px));
+    padding: 11px 15px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    background: #ffffff;
+    color: var(--ink);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-5px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.cart-feedback.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .main-nav {
@@ -566,6 +623,24 @@ input {
 
 .footer p {
     margin-bottom: 12px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 10px 24px;
+    flex-wrap: wrap;
+    margin: 0 auto 16px;
+}
+
+.contact-details a {
+    color: #dfeaf8;
+}
+
+.contact-details a:hover,
+.socials a:hover {
+    color: #5eead4;
+    text-decoration: underline;
 }
 
 .socials {
