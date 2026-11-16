@@ -3,116 +3,124 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Profile-Home</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+		<title>GTECH | Home</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="purchasing_order.js"></script>
-    </head>
-    <body>
-        <div class = "header">
-			<img id="logo" src="images/gtech_logo.png" width="60" height="70" alt="GTech Logo">
-			<form class="search" action="#" method="get">
-				<input type="text" name="q" placeholder="Search here" aria-label="Search">
-				<button type="submit">Search</button>
-			</form>
-			<img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart" onclick="openCart()">
-		</div>
-		<div class = "banner"></div>
-		<div class="nav-bar">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="services.html">Services</a></li>
-			</ul>
-		</div>
-		<div class = "main">
-			<div class="intro">
-				<div class = "intro-image">
-					<img id="myP_Pic" src="images/myP_Pic.jpg" width="170" height="210" alt="my profile picture">
-				</div>
-				<p id="greetings">Hi! Am</p>
-				<div class = "intro-message">
-					<h1>Gomolemo Thapelo Titus Maithufi</h1>
-					<p>Coding enthusiast and front-end developer with a passion for creating user-friendly and accessible web experiences.</p>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="index.html" aria-label="GTECH home page">
+					<img id="logo" src="images/gtech_logo.png" alt="GTECH logo">
+					<span>GTECH</span>
+				</a>
+				<form class="search" action="#" method="get">
+					<input type="text" name="q" placeholder="Search services" aria-label="Search">
+					<button type="submit">Search</button>
+				</form>
+				<div class="header-actions">
+					<img id="cart" src="images/shopping-cart.jpg" alt="Shopping cart" onclick="openCart()">
 				</div>
 			</div>
-			<div class="page-content">
-				<h1>Profile Summary</h1>
-				<br>
-				<div class="main-contents">
-					<div class="details">
-						<div class = "Details_Me">
-							<h2>My Journey</h2>
-							<div class="line_Details"></div>
-							<p>My interest in IT began when I was about 15 years old. At the time, I didn’t see it as a career path, but my mother recognized my talent early on and encouraged me to pursue it. In 2019, I enrolled in Civil Engineering, but soon realized that building was not my forte. The turning point came in 2020 when I worked as a Junior IT Technician. My role involved configuring and rolling out smartwatches, and it was there that I discovered my true passion for technology. From that moment, I committed fully to building a career in IT.</p>
-						</div>
-						<div class="Detail_Pic">
-						</div>
-					</div>
-					<div class="content-inner">
-						<div class = "content-about">
-							<div class="content-title-about">
-								<h2><strong>About Myself</strong></h2>
-							</div>
-							<p><i>As a front‑end developer, I specialize in writing clean, responsive, and standards‑based code to craft accessible web interfaces. My focus is on clarity, seamless interaction, and empowering communication across all devices.</i></p>
-						</div>
-						<div class = " content-talents">
-							<h2>Hobbies & Talents</h2>
-							<p>I am a detail-driven ICT and Computer Science graduate with a passion for turning technical complexity into clear, practical solutions. I specialize in breaking down concepts into step-by-step guides, visual diagrams, and real-world examples that make learning and execution seamless.</p>
-							<p>My strengths include technical drawing (especially isometric and orthographic projections), CSS styling, image editing, and documentation refinement. I am resourceful in adapting to software and hardware limitations, always finding creative workarounds to maintain clarity and compliance.</p>
-							<p>I thrive on building toolkits—formulas, templates, and branded layouts—that elevate both academic and professional work. With a growth mindset and a collaborative spirit, I approach every challenge with humility, precision, and a drive to improve.</p>
-						</div>
-					</div>
-				</div>
+		</header>
 
+		<nav class="main-nav">
+			<div class="container nav-inner">
+				<a href="index.html" class="active">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="services.html">Services</a>
 			</div>
-		</div>
+		</nav>
+
+		<main class="page-shell">
+			<section class="hero">
+				<div class="container hero-inner">
+					<div class="hero-copy">
+						<span class="eyebrow">Technology • Branding • Support</span>
+						<h1>Gomolemo Thapelo Titus Maithufi</h1>
+						<p>Creative technology professional helping businesses establish a strong digital presence, professional branding, and reliable systems that work.</p>
+						<div class="hero-actions">
+							<a class="primary-btn" href="services.html">Explore services</a>
+							<a class="secondary-btn" href="gallery.html">View portfolio</a>
+						</div>
+					</div>
+					<div class="hero-portrait">
+						<img id="myP_Pic" src="images/myP_Pic.jpg" alt="Gomolemo profile picture">
+					</div>
+				</div>
+			</section>
+
+			<section class="content-panel">
+				<div class="container page-content">
+					<h2 class="section-heading">Profile summary</h2>
+					<div class="profile-layout">
+						<article class="story-card">
+							<h2>My journey</h2>
+							<p>My interest in Information Technology began when I was around 15 years old. Although I did not yet see it as a career path, my mother recognised my talent and encouraged me to explore it. In 2019, I enrolled in Civil Engineering, but quickly realised that building and construction were not the right fit for me. The turning point came in 2020, when I worked as a Junior IT Technician, configuring and rolling out smartwatches for clients. It was there that I discovered my true passion for technology and committed myself to a career in IT.</p>
+						</article>
+						<div class="image-panel" aria-label="Office workspace"></div>
+					</div>
+
+					<div class="info-grid">
+						<article class="info-card about-card">
+							<h2>About me</h2>
+							<p>I am the founder of GTECH, a solutions-driven business focused on delivering technology, branding, and support services to small and growing enterprises. My mission is to help businesses build a professional identity and improve operational efficiency through practical, strategic technology solutions.</p>
+						</article>
+						<article class="info-card">
+							<h2>What I do</h2>
+							<ul>
+								<li>Branding and design for businesses and personal brands</li>
+								<li>Quotation and invoice templates for smooth operations</li>
+								<li>IT support and troubleshooting for local businesses</li>
+								<li>Professional print and copy services for everyday business needs</li>
+							</ul>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
 		<div id="cartModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closeCart()">&times;</span>
 				<h2>Service(s) Selected</h2>
 				<ul id="cart-items"></ul>
-				<p><b>Total:</b> R<span id="cart-total">0</span></p><button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
+				<p><b>Total:</b> R<span id="cart-total">0</span></p>
+				<button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
 			</div>
 		</div>
 		<div id="purchaseModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closePurchase()">&times;</span>
 				<div class="purchase-q">
-					<p>Do you have a loyal customer account</p>
+					<p>Do you have a loyal customer account?</p>
 					<br>
-					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes     </label><input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
+					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes</label>
+					<input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
 				</div>
-				<br>
 				<div id="loyalCustReg" class="loyalCustReg">
 					<form id="CustReg" class="CustReg">
-						<label for="fName">First Name(s):</label>
-						<br>
-						<input type="text" id="fName" title="Enter valid ID Name" placeholder="Type your name" name="fName">
-						<br><br>
-						<label for="lName">Last Name:</label>
-						<br>
-						<input type="text" id="lName" title="Please Enter last Name that's on ID" placeholder="Type your Last Name" name="lName">
-						<br><br>
+						<label for="fName">First name(s):</label>
+						<input type="text" id="fName" title="Enter valid ID name" placeholder="Type your name" name="fName">
+						<label for="lName">Last name:</label>
+						<input type="text" id="lName" title="Please enter the last name that's on ID" placeholder="Type your last name" name="lName">
 						<label for="dOB">Birthday:</label>
-						<br>
 						<input type="date" id="dOB" name="birthday">
-						<br><br>
-						<label for="contactNo">Phone No.:</label>
-						<br>
-						<input type="tel" maxlength="10"  id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10 digit number">
-						<br><br>
+						<label for="contactNo">Phone no.:</label>
+						<input type="tel" maxlength="10" id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10-digit number">
 						<input type="submit" value="Submit" onclick="saveFormData()">
 					</form>
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<p>© GTech. All Rights Reserved.</p>
+
+		<footer class="footer">
+			<p>© GTECH. All Rights Reserved.</p>
 			<div class="socials">
 				<a href="https://www.facebook.com/gomolemo.titus.3">Facebook</a>
 				<a href="#">LinkedIn</a>
 				<a href="https://github.com/GomolemoTT">GitHub</a>
 			</div>
-		</div>
-    </body>
+		</footer>
+	</body>
 </html>

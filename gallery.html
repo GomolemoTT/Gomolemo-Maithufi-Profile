@@ -1,114 +1,104 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio Page</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>GTECH | Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="purchasing_order.js"></script>
-    </head>
-    <body>
-        <div class = "header">
-			<img id="logo" src="images/gtech_logo.png" width="60" height="70">
-			<form class="search" action="#" method="get">
-				<input type="text" name="q" placeholder="Search here" aria-label="Search">
-				<button type="submit">Search</button>
-			</form>
-			<img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart" onclick="openCart()">
-		</div>
-		<div class = "banner"></div>
-		<div class="nav-bar">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Gallery</a></li>
-                <li><a href="services.html">Services</a></li>
-			</ul>
-		</div>
-		<div class = "main">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="index.html" aria-label="GTECH home page">
+					<img id="logo" src="images/gtech_logo.png" alt="GTECH logo">
+					<span>GTECH</span>
+				</a>
+				<form class="search" action="#" method="get">
+					<input type="text" name="q" placeholder="Search services" aria-label="Search">
+					<button type="submit">Search</button>
+				</form>
+				<div class="header-actions">
+					<img id="cart" src="images/shopping-cart.jpg" alt="Shopping cart" onclick="openCart()">
+				</div>
+			</div>
+		</header>
+
+		<nav class="main-nav">
+			<div class="container nav-inner">
+				<a href="index.html">Home</a>
+				<a href="gallery.html" class="active">Gallery</a>
+				<a href="services.html">Services</a>
+			</div>
+		</nav>
+
+		<main class="page-shell">
 			<div class="intro-portfolio">
-				<h1>Portfolio Summary</h1>
+				<h1>Featured client project</h1>
+				<p>Current work supporting a client’s digital presence.</p>
 			</div>
 			<div class="page-content">
 				<div class="project-grid">
-                    <div class="project-card1">
-                        <div class="text-content">
-                            <h3>Responsive Web Profile</h3>
-                            <p>A personal profile site built with HTML, CSS, and Live Server. Features dark mode, card layout, and responsive design.</p>
-                            <p><strong>Tech:</strong> HTML, CSS, VS Code</p>
-                            <a href="#">View Demo</a> | <a href="#">GitHub</a>
-                        </div>
-                        <img src="images/responsive_card1.jpg" width="350" height="320">
-                    </div>
-
-                    <div class="project-card2">
-                        <img src="images/isometric_card2.jpg" width="350" height="320">
-                        <div class="text-content">
-                            <h3>Isometric Drawing Toolkit</h3>
-                            <p>A visual aid for producing compliant isometric projections, with downloadable templates and measurement guides.</p>
-                            <p><strong>Tech:</strong> CSS Grid, SVG, Image Editing</p>
-                            <a href="#">View Demo</a> | <a href="#">GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card3">
-                        <div class="text-content">
-                            <h3>CSS Branding Experiments</h3>
-                            <p>Exploring gradients, layout properties, and branded documentation styles for tech-driven projects.</p>
-                            <p><strong>Tech:</strong> CSS3, Flexbox, Custom Fonts</p>
-                            <a href="#">View Demo</a> | <a href="#">GitHub</a>
-                        </div>
-                        <img src="images/branding_card3.jpg" width="350" height="320">
-                    </div>
-                </div>
+					<article class="project-card featured-project">
+						<div class="text-content">
+							<span class="project-status">Ongoing project</span>
+							<h2>Maiths Enterprise website</h2>
+							<p>Maiths Enterprise is a client whose website I currently maintain. This ongoing project supports the company’s online presence as it shares its tailored engineering solutions.</p>
+							<div class="meta"><span><strong>My role:</strong> Website maintenance</span></div>
+							<a href="https://maithsenterprise.co.za" target="_blank" rel="noopener noreferrer">Visit maithsenterprise.co.za</a>
+						</div>
+						<aside class="project-details" aria-label="Project details">
+							<span>Client</span>
+							<strong>Maiths Enterprise</strong>
+							<span>Project status</span>
+							<strong>In progress</strong>
+						</aside>
+					</article>
+				</div>
 			</div>
-		</div>
-        <div id="cartModal" class="modal">
+		</main>
+
+		<div id="cartModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closeCart()">&times;</span>
 				<h2>Service(s) Selected</h2>
 				<ul id="cart-items"></ul>
-				<p><b>Total:</b> R<span id="cart-total">0</span></p><button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
+				<p><b>Total:</b> R<span id="cart-total">0</span></p>
+				<button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
 			</div>
 		</div>
 		<div id="purchaseModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closePurchase()">&times;</span>
 				<div class="purchase-q">
-					<p>Do you have a loyal customer account</p>
+					<p>Do you have a loyal customer account?</p>
 					<br>
-					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes     </label><input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
+					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes</label>
+					<input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
 				</div>
-				<br>
 				<div id="loyalCustReg" class="loyalCustReg">
 					<form id="CustReg" class="CustReg">
-						<label for="fName">First Name(s):</label>
-						<br>
-						<input type="text" id="fName" title="Enter valid ID Name" placeholder="Type your name" name="fName">
-						<br><br>
-						<label for="lName">Last Name:</label>
-						<br>
-						<input type="text" id="lName" title="Please Enter last Name that's on ID" placeholder="Type your Last Name" name="lName">
-						<br><br>
+						<label for="fName">First name(s):</label>
+						<input type="text" id="fName" title="Enter valid ID name" placeholder="Type your name" name="fName">
+						<label for="lName">Last name:</label>
+						<input type="text" id="lName" title="Please enter the last name that's on ID" placeholder="Type your last name" name="lName">
 						<label for="dOB">Birthday:</label>
-						<br>
 						<input type="date" id="dOB" name="birthday">
-						<br><br>
-						<label for="contactNo">Phone No.:</label>
-						<br>
-						<input type="tel" maxlength="10"  id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10 digit number">
-						<br><br>
+						<label for="contactNo">Phone no.:</label>
+						<input type="tel" maxlength="10" id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10-digit number">
 						<input type="submit" value="Submit" onclick="saveFormData()">
 					</form>
 				</div>
 			</div>
 		</div>
-        <div class="footer">
-            <p>© GTech. All Rights Reserved.</p>
-            <div class="socials">
-                <a href="https://www.facebook.com/gomolemo.titus.3">Facebook</a>
-                <a href="#">LinkedIn</a>
-                <a href="https://github.com/GomolemoTT">GitHub</a>
-            </div>
-        </div>
-    </body>
+
+		<footer class="footer">
+			<p>© GTECH. All Rights Reserved.</p>
+			<div class="socials">
+				<a href="https://www.facebook.com/gomolemo.titus.3">Facebook</a>
+				<a href="#">LinkedIn</a>
+				<a href="https://github.com/GomolemoTT">GitHub</a>
+			</div>
+		</footer>
+	</body>
 </html>

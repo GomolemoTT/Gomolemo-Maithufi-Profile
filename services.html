@@ -1,92 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Services Page</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+		<title>GTECH | Services</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="purchasing_order.js"></script>
-    </head>
-    <body>
-        <div class = "header">
-			<img id="logo" src="images/gtech_logo.png" width="60" height="70">
-			<form class="search" action="#" method="get">
-				<input type="text" name="q" placeholder="Search here" aria-label="Search">
-				<button type="submit">Search</button>
-			</form>
-			<img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart" onclick="openCart()">
-		</div>
-		<div class = "banner"></div>
-		<div class="nav-bar">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#">Services</a></li>
-			</ul>
-		</div>
-		<div class = "main">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="index.html" aria-label="GTECH home page">
+					<img id="logo" src="images/gtech_logo.png" alt="GTECH logo">
+					<span>GTECH</span>
+				</a>
+				<form class="search" action="#" method="get">
+					<input type="text" name="q" placeholder="Search services" aria-label="Search">
+					<button type="submit">Search</button>
+				</form>
+				<div class="header-actions">
+					<img id="cart" src="images/shopping-cart.jpg" alt="Shopping cart" onclick="openCart()">
+				</div>
+			</div>
+		</header>
+
+		<nav class="main-nav">
+			<div class="container nav-inner">
+				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="services.html" class="active">Services</a>
+			</div>
+		</nav>
+
+		<main class="page-shell">
 			<div class="intro-service">
-				<h1>Click on an item in the picture</h1>
+				<h1>Professional services for business growth</h1>
 			</div>
 			<div class="page-content">
-                <div class="services-content">
-                    <img src="images/services-pic.jpg" usemap="#image-map">
+				<div class="services-overview">
+					<div class="overview-item">
+						<h3>Branding</h3>
+						<p>Professional logos, document design, and business visuals that build trust.</p>
+					</div>
+					<div class="overview-item">
+						<h3>Support</h3>
+						<p>Reliable computer and phone troubleshooting to keep your systems running smoothly.</p>
+					</div>
+					<div class="overview-item">
+						<h3>Business tools</h3>
+						<p>High-quality templates and digital support for everyday business operations.</p>
+					</div>
+				</div>
 
-                    <map name="image-map">
-                        <area target="_self" alt="Phone" title="Phone" href="phonesoftwareup.html" coords="802,909,769,688,851,668,877,886" shape="poly">
-                        <area target="_self" alt="Logo" title="Logo" href="logodesign.html" coords="228,1037,51" shape="circle">
-                        <area target="_self" alt="Computer" title="Computer" href="computersoftwareup.html" coords="2,834,1,148,807,68,839,625" shape="poly">
-                    </map>
-                </div>
+				<div class="service-grid">
+					<div class="service-card">
+						<img src="images/services-pic.jpg" alt="Computer services overview">
+						<div class="content">
+							<h2>Computer software solutions</h2>
+							<p>Keep your desktops and laptops secure, updated, and running efficiently with technical support that is both practical and affordable.</p>
+							<div class="price">From R190</div>
+							<a href="computersoftwareup.html"><button type="button">View plan</button></a>
+						</div>
+					</div>
+
+					<div class="service-card">
+						<img src="images/logoDesign.jpg" alt="Logo design service">
+						<div class="content">
+							<h2>Brand & design services</h2>
+							<p>Custom logo concepts, document layouts, and visual branding assets tailored to distinctive businesses and personal brands.</p>
+							<div class="price">From R280</div>
+							<a href="logodesign.html"><button type="button">View plan</button></a>
+						</div>
+					</div>
+
+					<div class="service-card">
+						<img src="images/phoneUnlock.jpg" alt="Phone support service">
+						<div class="content">
+							<h2>Phone software support</h2>
+							<p>Solutions for pin lock recovery, software issues, and device troubleshooting with friendly, responsive service.</p>
+							<div class="price">From R200</div>
+							<a href="phonesoftwareup.html"><button type="button">View plan</button></a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
+		</main>
+
 		<div id="cartModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closeCart()">&times;</span>
 				<h2>Service(s) Selected</h2>
 				<ul id="cart-items"></ul>
-				<p><b>Total:</b> R<span id="cart-total">0</span></p><button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
+				<p><b>Total:</b> R<span id="cart-total">0</span></p>
+				<button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
 			</div>
 		</div>
 		<div id="purchaseModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closePurchase()">&times;</span>
 				<div class="purchase-q">
-					<p>Do you have a loyal customer account</p>
+					<p>Do you have a loyal customer account?</p>
 					<br>
-					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes     </label><input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
+					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes</label>
+					<input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
 				</div>
-				<br>
 				<div id="loyalCustReg" class="loyalCustReg">
 					<form id="CustReg" class="CustReg">
-						<label for="fName">First Name(s):</label>
-						<br>
-						<input type="text" id="fName" title="Enter valid ID Name" placeholder="Type your name" name="fName">
-						<br><br>
-						<label for="lName">Last Name:</label>
-						<br>
-						<input type="text" id="lName" title="Please Enter last Name that's on ID" placeholder="Type your Last Name" name="lName">
-						<br><br>
+						<label for="fName">First name(s):</label>
+						<input type="text" id="fName" title="Enter valid ID name" placeholder="Type your name" name="fName">
+						<label for="lName">Last name:</label>
+						<input type="text" id="lName" title="Please enter the last name that's on ID" placeholder="Type your last name" name="lName">
 						<label for="dOB">Birthday:</label>
-						<br>
 						<input type="date" id="dOB" name="birthday">
-						<br><br>
-						<label for="contactNo">Phone No.:</label>
-						<br>
-						<input type="tel" maxlength="10"  id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10 digit number">
-						<br><br>
+						<label for="contactNo">Phone no.:</label>
+						<input type="tel" maxlength="10" id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10-digit number">
 						<input type="submit" value="Submit" onclick="saveFormData()">
 					</form>
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<p>© GTech. All Rights Reserved.</p>
+
+		<footer class="footer">
+			<p>© GTECH. All Rights Reserved.</p>
 			<div class="socials">
 				<a href="https://www.facebook.com/gomolemo.titus.3">Facebook</a>
 				<a href="#">LinkedIn</a>
 				<a href="https://github.com/GomolemoTT">GitHub</a>
 			</div>
-		</div>
-    </body>
+		</footer>
+	</body>
 </html>

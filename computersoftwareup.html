@@ -3,105 +3,105 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Computer Troubleshooting Page</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+		<title>GTECH | Computer Support</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="purchasing_order.js"></script>
-    </head>
-    <body>
-		<div class = "header">
-			<img id="logo" src="images/gtech_logo.png" width="60" height="70" alt="GTech logo" title="GTech logo">
-			<form class="search" action="#" method="get">
-				<input type="text" name="q" placeholder="Search here" aria-label="Search">
-				<button type="submit">Search</button>
-			</form>
-			<img id="cart" src="images/shopping-cart.jpg" width="44" height="30" alt="Shopping cart" onclick="openCart()">
-		</div>
-		<div class = "banner"></div>
-		<div class="nav-bar">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-                <li><a href="services.html">Services</a></li>
-			</ul>
-		</div>
-		<div class = "main">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="index.html" aria-label="GTECH home page">
+					<img id="logo" src="images/gtech_logo.png" alt="GTECH logo">
+					<span>GTECH</span>
+				</a>
+				<form class="search" action="#" method="get">
+					<input type="text" name="q" placeholder="Search services" aria-label="Search">
+					<button type="submit">Search</button>
+				</form>
+				<div class="header-actions">
+					<img id="cart" src="images/shopping-cart.jpg" alt="Shopping cart" onclick="openCart()">
+				</div>
+			</div>
+		</header>
+
+		<nav class="main-nav">
+			<div class="container nav-inner">
+				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="services.html" class="active">Services</a>
+			</div>
+		</nav>
+
+		<main class="page-shell">
 			<div class="intro-portfolio">
-				<h1>Computer Software Plans</h1>
+				<h1>Computer software support</h1>
 			</div>
 			<div class="page-content">
-				<div class="pcsoftware-content">
-					<div class="pcsoftwareup">
-						<img src="images/upgrade-of-software.jpg" alt="softwareup_pic" width="254" height="202" >
-						<div class="pc-work">
-							<h2>Software Update</h2>
-							<p>We offer affordable prices to keep your PC updated click add to get your PC updated</p>
-							<h4>R190</h4>
-							<div>
-								<button onclick="addToCart('software-update',190)">Add</button>
-							</div>
+				<div class="service-grid">
+					<div class="service-card">
+						<img src="images/upgrade-of-software.jpg" alt="Software update service">
+						<div class="content">
+							<h2>System updates</h2>
+							<p>Keep your computer secure, fast, and dependable with software and operating system updates tailored to your needs.</p>
+							<div class="price">R190</div>
+							<button onclick="addToCart('software-update',190)">Add to quote</button>
 						</div>
 					</div>
-					<div class="pcsoftwareup">
-						<img src="images/software_installation-pic.jpg" alt="softwareup_pic" width="254" height="202" >
-						<div class="pc-work">
-							<h2>Software Installation</h2>
-							<p>Smoth and relaible installations </p>
-							<h4>R200</h4>
-							<div>
-								<button onclick="addToCart('software-installation',200)">Add</button>
-							</div>
+
+					<div class="service-card">
+						<img src="images/software_installation-pic.jpg" alt="Software installation service">
+						<div class="content">
+							<h2>Software installation</h2>
+							<p>Professional installation of essential tools and programmes to improve productivity and ensure smooth day-to-day use.</p>
+							<div class="price">R200</div>
+							<button onclick="addToCart('software-installation',200)">Add to quote</button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</main>
+
 		<div id="cartModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closeCart()">&times;</span>
 				<h2>Service(s) Selected</h2>
 				<ul id="cart-items"></ul>
-				<p><b>Total:</b> R<span id="cart-total">0</span></p><button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
+				<p><b>Total:</b> R<span id="cart-total">0</span></p>
+				<button class="purchase-button" id="bPurchase" onclick="openPurchase()">Purchase</button>
 			</div>
 		</div>
 		<div id="purchaseModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closePurchase()">&times;</span>
 				<div class="purchase-q">
-					<p>Do you have a loyal customer account</p>
+					<p>Do you have a loyal customer account?</p>
 					<br>
-					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes     </label><input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
+					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes</label>
+					<input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
 				</div>
-				<br>
 				<div id="loyalCustReg" class="loyalCustReg">
 					<form id="CustReg" class="CustReg">
-						<label for="fName">First Name(s):</label>
-						<br>
-						<input type="text" id="fName" title="Enter valid ID Name" placeholder="Type your name" name="fName">
-						<br><br>
-						<label for="lName">Last Name:</label>
-						<br>
-						<input type="text" id="lName" title="Please Enter last Name that's on ID" placeholder="Type your Last Name" name="lName">
-						<br><br>
+						<label for="fName">First name(s):</label>
+						<input type="text" id="fName" title="Enter valid ID name" placeholder="Type your name" name="fName">
+						<label for="lName">Last name:</label>
+						<input type="text" id="lName" title="Please enter the last name that's on ID" placeholder="Type your last name" name="lName">
 						<label for="dOB">Birthday:</label>
-						<br>
 						<input type="date" id="dOB" name="birthday">
-						<br><br>
-						<label for="contactNo">Phone No.:</label>
-						<br>
-						<input type="tel" maxlength="10"  id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10 digit number">
-						<br><br>
+						<label for="contactNo">Phone no.:</label>
+						<input type="tel" maxlength="10" id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10-digit number">
 						<input type="submit" value="Submit" onclick="saveFormData()">
 					</form>
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<p>© GTech. All Rights Reserved.</p>
+
+		<footer class="footer">
+			<p>© GTECH. All Rights Reserved.</p>
 			<div class="socials">
 				<a href="https://www.facebook.com/gomolemo.titus.3">Facebook</a>
 				<a href="#">LinkedIn</a>
 				<a href="https://github.com/GomolemoTT">GitHub</a>
 			</div>
-		</div>
-    </body>
+		</footer>
+	</body>
 </html>
