@@ -14,9 +14,10 @@
 					<img id="logo" src="images/gtech_logo.png" alt="GTECH logo">
 					<span>GTECH</span>
 				</a>
-				<form class="search" action="#" method="get">
-					<input type="text" name="q" placeholder="Search services" aria-label="Search">
+				<form class="search" onsubmit="return searchSite(this)">
+					<input type="search" name="q" placeholder="Search services" aria-label="Search services" required>
 					<button type="submit">Search</button>
+					<span class="search-message" role="status" aria-live="polite"></span>
 				</form>
 				<div class="header-actions">
 					<button class="cart-button" type="button" aria-label="Open shopping cart" onclick="openCart()">
@@ -47,8 +48,8 @@
 						<div class="content">
 							<h2>System updates</h2>
 							<p>Keep your computer secure, fast, and dependable with software and operating system updates tailored to your needs.</p>
-							<div class="price">R190</div>
-							<button onclick="addToCart('software-update',190)">Add to quote</button>
+							<div class="price">R350</div>
+							<button onclick="addToCart('software-update',350)">Add to quote</button>
 						</div>
 					</div>
 
@@ -57,8 +58,8 @@
 						<div class="content">
 							<h2>Software installation</h2>
 							<p>Professional installation of essential tools and programmes to improve productivity and ensure smooth day-to-day use.</p>
-							<div class="price">R200</div>
-							<button onclick="addToCart('software-installation',200)">Add to quote</button>
+							<div class="price">R390</div>
+							<button onclick="addToCart('software-installation',390)">Add to quote</button>
 						</div>
 					</div>
 				</div>

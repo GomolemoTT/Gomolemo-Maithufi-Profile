@@ -14,9 +14,10 @@
 					<img id="logo" src="images/gtech_logo.png" alt="GTECH logo">
 					<span>GTECH</span>
 				</a>
-				<form class="search" action="#" method="get">
-					<input type="text" name="q" placeholder="Search services" aria-label="Search">
+				<form class="search" onsubmit="return searchSite(this)">
+					<input type="search" name="q" placeholder="Search services" aria-label="Search services" required>
 					<button type="submit">Search</button>
+					<span class="search-message" role="status" aria-live="polite"></span>
 				</form>
 				<div class="header-actions">
 					<button class="cart-button" type="button" aria-label="Open shopping cart" onclick="openCart()">
@@ -57,7 +58,7 @@
 						<div class="content">
 							<h2>Technical problem fix</h2>
 							<p>Diagnose and resolve device software issues so your phone runs smoothly, reliably, and efficiently again.</p>
-							<div class="price">R200</div>
+							<div class="price">R210</div>
 							<button onclick="addToCart('softwareTechProblem',210)">Add to quote</button>
 						</div>
 					</div>
