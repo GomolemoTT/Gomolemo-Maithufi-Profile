@@ -78,24 +78,25 @@
 		<div id="purchaseModal" class="modal">
 			<div class="modal-content">
 				<span class="close" onclick="closePurchase()">&times;</span>
-				<div class="purchase-q">
-					<p>Do you have a loyal customer account?</p>
-					<br>
-					<input type="radio" id="rYes" value="Yes" name="loyalCust" onclick="displayFormDataReg()"><label for="rYes">Yes</label>
-					<input type="radio" id="rNo" value="No" name="loyalCust" onclick="showForm()"><label for="rNo">No</label>
-				</div>
-				<div id="loyalCustReg" class="loyalCustReg">
-					<form id="CustReg" class="CustReg">
-						<label for="fName">First name(s):</label>
-						<input type="text" id="fName" title="Enter valid ID name" placeholder="Type your name" name="fName">
-						<label for="lName">Last name:</label>
-						<input type="text" id="lName" title="Please enter the last name that's on ID" placeholder="Type your last name" name="lName">
-						<label for="dOB">Birthday:</label>
-						<input type="date" id="dOB" name="birthday">
-						<label for="contactNo">Phone no.:</label>
-						<input type="tel" maxlength="10" id="contactNo" placeholder="Type your phone number here" name="contactNo" title="Enter 10-digit number">
-						<input type="submit" value="Submit" onclick="saveFormData()">
-					</form>
+				<h2>Request your order</h2>
+				<p class="checkout-note">Choose how you would prefer to pay. We will confirm your order and send the relevant payment instructions. No payment is processed on this website.</p>
+				<form class="checkout-form" onsubmit="return sendOrderRequest(this)">
+					<label for="customerName">Your name</label>
+					<input type="text" id="customerName" name="customerName" autocomplete="name" required>
+					<label for="customerPhone">Your contact number</label>
+					<input type="tel" id="customerPhone" name="customerPhone" autocomplete="tel" required>
+					<label for="paymentMethod">Preferred payment method</label>
+					<select id="paymentMethod" name="paymentMethod" required>
+						<option value="" disabled selected>Select a payment method</option>
+						<option value="Bank transfer">Bank transfer</option>
+						<option value="E-wallet">E-wallet</option>
+						<option value="Cash send">Cash send</option>
+					</select>
+					<button class="purchase-button checkout-submit" type="submit">Continue to WhatsApp</button>
+				</form>
+				<div id="orderConfirmation" class="order-confirmation" hidden>
+					<p>Your order details are ready. Review the message in WhatsApp and tap Send to submit your request. Your cart will remain saved until you remove its items.</p>
+					<a id="orderWhatsAppLink" class="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer">Open WhatsApp order message</a>
 				</div>
 			</div>
 		</div>

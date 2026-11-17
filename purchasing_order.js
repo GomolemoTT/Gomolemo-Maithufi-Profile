@@ -101,6 +101,12 @@ function closeCart() {//closes the cart
 }
 
 function openPurchase() {//opens the purchase box
+    if (cart.length === 0) {
+        window.alert("Add at least one service to your cart before placing an order request.");
+        return;
+    }
+
+    document.getElementById("orderConfirmation").hidden = true;
     document.getElementById("purchaseModal").style.display = "block";
     closeCart();
 }
@@ -109,30 +115,38 @@ function closePurchase() {//closes the purchase box
     document.getElementById("purchaseModal").style.display = "none";
 }
 
-function showForm() {
-    document.getElementById("loyalCustReg").style.display = "block";
-}
-
-function saveFormData() {
-    localStorage.setItem("fName",document.getElementById("fName").value);
-    localStorage.setItem("lName",document.getElementById("lName").value);
-    localStorage.setItem("contactNo" ,document.getElementById("contactNo").value);
-    displayFormDataReg();
-    closePurchase();
-}
-
-function displayFormDataReg() {
-    let fName = localStorage.getItem("fName");
-    let lName = localStorage.getItem("lName");
-    let contactNo = localStorage.getItem("contactNo");
-
-    if (fName && lName && contactNo) {
-        alert(fName + " " + lName + " you are a registered loyal customer with contact number " + contactNo + ". The total amount of your purchase is R" + total + ".");
+function sendOrderRequest(form) {
+    if (cart.length === 0) {
+        window.alert("Your cart is empty. Add a service before placing an order request.");
         closePurchase();
-    } else {
-        alert("Please register as Loyal Customer");
-        showForm();
+        return false;
     }
+
+    const customerName = form.elements.customerName.value.trim();
+    const customerPhone = form.elements.customerPhone.value.trim();
+    const paymentMethod = form.elements.paymentMethod.value;
+    const orderItems = cart.map(item => `- ${item.product} - R${item.price}`).join("\n");
+    const message = [
+        "Hi GTECH, I would like to request an order. This is not a payment confirmation.",
+        "",
+        `Name: ${customerName}`,
+        `Contact number: ${customerPhone}`,
+        "",
+        "Requested services:",
+        orderItems,
+        "",
+        `Total: R${total}`,
+        `Preferred payment method: ${paymentMethod}`,
+        "",
+        "Please confirm the order and send me the payment instructions."
+    ].join("\n");
+    const whatsappUrl = `https://wa.me/27684352360?text=${encodeURIComponent(message)}`;
+    const whatsappLink = document.getElementById("orderWhatsAppLink");
+
+    whatsappLink.href = whatsappUrl;
+    document.getElementById("orderConfirmation").hidden = false;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    return false;
 }
 
 function searchSite(form) {
