@@ -77,12 +77,14 @@ input {
 }
 
 .brand img {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.08);
-    padding: 4px;
+    flex: 0 0 68px;
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    background: #f8fafc;
+    padding: 2px;
 }
 
 .search {
