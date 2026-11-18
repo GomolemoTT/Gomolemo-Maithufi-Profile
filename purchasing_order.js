@@ -167,12 +167,16 @@ function searchSite(form) {
             terms: ["logo", "document design", "document", "branding", "brand design", "graphic design", "stationery"]
         },
         {
+            page: "services.html",
+            terms: ["service", "support", "software development", "web development", "website development", "app", "apps", "application development"]
+        },
+        {
             page: "gallery.html",
             terms: ["gallery", "portfolio", "project", "client", "website maintenance", "website", "maiths enterprise", "maithsenterprise"]
         },
         {
             page: "services.html",
-            terms: ["service", "support", "software", "business"]
+            terms: ["software", "business"]
         },
         {
             page: "index.html",
